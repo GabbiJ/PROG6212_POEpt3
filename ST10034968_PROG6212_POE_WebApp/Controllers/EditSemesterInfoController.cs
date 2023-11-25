@@ -30,7 +30,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                 }
             }
 
-                return View(allMmodules);
+            return View(allMmodules);
         }
         public IActionResult AddStudyTime()
         {
@@ -131,10 +131,9 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         /// <param name="modClassHours"></param>
         public async void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
         {
-            
+
             //checking if the module already exists in the database 
             Module mod = null;
-            MessageBoxResult? confirmModuleInsertion = null;
             using (SqlConnection con = Connections.GetConnection())
             {
                 string strSelect = $"SELECT * FROM Module WHERE ModCode = '{modCode}'";
@@ -145,31 +144,12 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                     //checking if module exists (using module code) to register student for
                     if (await r.ReadAsync())
                     {
-                        //asking student if they are ok with letting the module theyve inputted be overwritten by already stored module 
-                        mod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
-                        confirmModuleInsertion = MessageBox.Show("Another module with this code already exists (information below). By clicking yes, you agree to the information already stored under this module code to be used rather than the information you have entered." +
-                            $"\nModule Code: {mod.Code}" +
-                            $"\nModule Name: {mod.Name}" +
-                            $"\nNumber of Credits: {mod.NumOfCredits}" +
-                            $"\nClass hours per week: {mod.ClassHoursPerWeek}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                        if (confirmModuleInsertion == MessageBoxResult.No)
-                        {
-                            txbModName.Clear();
-                            txbModCode.Clear();
-                            txbNumOfCredits.Clear();
-                            txbClassHoursPerWeek.Clear();
-                            return;
-                        }
+                        string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{mod.Code}')";
+                        SqlCommand cmdInsert = new SqlCommand(strInsert, con);
+                        await cmdInsert.ExecuteNonQueryAsync();
+                        return;
                     }
-                }
-                //inserting data into RegisterModule when module already exists
-                if (confirmModuleInsertion == MessageBoxResult.Yes)
-                {
-                    string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{mod.Code}')";
-                    SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                    await cmdInsert.ExecuteNonQueryAsync();
-                    this.Close();
-                    return;
+
                 }
                 //inserting data into both Module table and RegisterModule table
                 //inserting new module into Module table
@@ -181,7 +161,6 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                 cmdInsert2 = new SqlCommand(strInsert2, con);
                 await cmdInsert2.ExecuteNonQueryAsync();
             }
-            this.Close();
         }
 
 
