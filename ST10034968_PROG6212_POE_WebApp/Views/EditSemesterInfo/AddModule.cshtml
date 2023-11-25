@@ -1,0 +1,57 @@
+﻿@model POEClassLibrary.Module
+
+@{
+    ViewData["Title"] = "AddModule";
+}
+
+<div style="background-image: linear-gradient(to right,#9C89B8, #EDEAF3); width: 100%; border-radius: 20px; padding: 5px">
+    <h1 style="color:#151515">Add Module</h1>
+</div>
+
+
+<form asp-action="AddModule" method="post">
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <label style="font-size:40px">Code:</label>
+                </td>
+                <td>
+                    <input type="text" name="txtCode" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="txtName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Number of Credits:</label>
+                </td>
+                <td>
+                    <input type="number" name="txtNumOfCredits" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Class Hours Per Week:</label>
+                </td>
+                <td>
+                    <input type="number" name="txtClassHoursPerWeek" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <button name="btnEnter" style="font-size:35px;">Add</button>
+        <br />
+        <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
+    </div>
+</form>
+
+

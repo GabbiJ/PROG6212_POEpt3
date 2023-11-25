@@ -1,0 +1,48 @@
+﻿@model POEClassLibrary.StudyTime
+
+@{
+    ViewData["Title"] = "AddStudyTime";
+}
+
+<div style="background-image: linear-gradient(to right,#EFC3E6, #EDEAF3); width: 100%; border-radius: 20px; padding: 5px">
+    <h1 style="color:#151515">Add Study Time</h1>
+</div>
+
+
+<form asp-action="AddModule" method="post">
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <label style="font-size:40px">Date Completed:</label>
+                </td>
+                <td>
+                    <input type="datetime" name="txtDateCompleted"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Number of Hours:</label>
+                </td>
+                <td>
+                    <input type="number" name="txtNumOfHours" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Module Code:</label>
+                </td>
+                <td>
+                    <input type="text" name="dlModCode" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <button name="btnEnter" style="font-size:35px;">Add</button>
+        <br />
+        <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
+    </div>
+</form>
+

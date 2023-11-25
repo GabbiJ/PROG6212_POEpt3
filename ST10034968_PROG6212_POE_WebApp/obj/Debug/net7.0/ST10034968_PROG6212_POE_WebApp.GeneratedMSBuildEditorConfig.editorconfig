@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\USER-PC\OneDrive\Desktop\ST10034968_PROG6212_POE_WebApp\ST10034968_PROG6212_POE_WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/USER-PC/OneDrive/Desktop/ST10034968_PROG6212_POE_WebApp/ST10034968_PROG6212_POE_WebApp/Views/EditSemesterInfo/AddModule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFNlbWVzdGVySW5mb1xBZGRNb2R1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER-PC/OneDrive/Desktop/ST10034968_PROG6212_POE_WebApp/ST10034968_PROG6212_POE_WebApp/Views/EditSemesterInfo/AddStudyTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFNlbWVzdGVySW5mb1xBZGRTdHVkeVRpbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/USER-PC/OneDrive/Desktop/ST10034968_PROG6212_POE_WebApp/ST10034968_PROG6212_POE_WebApp/Views/EditSemesterInfo/EditSemesterInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFNlbWVzdGVySW5mb1xFZGl0U2VtZXN0ZXJJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

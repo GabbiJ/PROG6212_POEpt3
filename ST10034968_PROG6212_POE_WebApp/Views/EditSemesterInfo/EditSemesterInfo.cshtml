@@ -1,14 +1,13 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "EditSemesterInfo";
 }
 
-<div style="background-image: linear-gradient(to right,#F15156, #FEEAEA); width: 100%; border-radius: 20px;">
-    <h1 style="color:#151515">EditSemesterInfo</h1>
+<div style="background-image: linear-gradient(to right,#F15156, #FEEAEA); width: 100%; border-radius: 20px; padding: 5px">
+    <h1 style="color:#151515">Edit Semester Information</h1>
 </div>
 
-<body>
-    <form asp-action="Login" method="post">
+<form asp-action="EditSemesterInfo" method="post">
+    <div>
         <table style="width: 100%;">
             <tr>
                 <td>
@@ -27,11 +26,13 @@
                 </td>
             </tr>
         </table>
-        <br />
+    </div>
+    <br />
+    <div style="text-align:center">
         <button name="btnEnter" style="font-size:35px;">Enter</button>
         <br />
         <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
-    </form>
-</body>
+    </div>
+</form>
 
 
