@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using POEClassLibrary;
 
 namespace ST10034968_PROG6212_POE_WebApp.Controllers
 {
@@ -14,7 +15,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         }
         public IActionResult AddStudyTime()
         {
-            return View();
+            return View(CurrentSemester.modules);
         }
 
         //My methods

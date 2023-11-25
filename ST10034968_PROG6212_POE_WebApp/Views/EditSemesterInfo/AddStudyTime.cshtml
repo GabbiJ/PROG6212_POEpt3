@@ -1,10 +1,10 @@
-﻿@model POEClassLibrary.StudyTime
+﻿@model List<POEClassLibrary.Module>
 
 @{
     ViewData["Title"] = "AddStudyTime";
 }
 
-<div style="background-image: linear-gradient(to right,#EFC3E6, #EDEAF3); width: 100%; border-radius: 20px; padding: 5px">
+<div style="background-image: linear-gradient(to right,#EB9EDB, #EDEAF3); width: 100%; border-radius: 20px; padding: 5px">
     <h1 style="color:#151515">Add Study Time</h1>
 </div>
 
@@ -33,7 +33,13 @@
                     <label style="font-size:40px">Module Code:</label>
                 </td>
                 <td>
-                    <input type="text" name="dlModCode" />
+                    <select name="cmbModCode" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+
+                    </select>
                 </td>
             </tr>
         </table>
