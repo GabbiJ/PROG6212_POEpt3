@@ -1,4 +1,4 @@
-﻿@model POEClassLibrary.Module
+﻿@model List<POEClassLibrary.Module>
 
 @{
     ViewData["Title"] = "AddModule";
@@ -8,6 +8,31 @@
     <h1 style="color:#151515">Add Module</h1>
 </div>
 
+<div>
+    <h2>All Pre-Existing Modules</h2>
+    <table cellpadding="7" style="border:solid;">
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Credits</th>
+            <th>Class Hours Per Week</th>
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Name</td>
+                <td>@m.Code</td>
+                <td>@m.NumOfCredits</td>
+                <td>@m.ClassHoursPerWeek</td>
+            </tr>
+        }
+    </table>
+    <label>If you wish to add one of the modules above simply input the corresponding module code for the module.
+        However, the modules in the list above take precedence over the information submitted. 
+        Thus if you enter a module code of a pre-existing module in the table above all other 
+        information you have submitted will be ignored and the pre-existing module information will be used.
+    </label>
+</div>
 
 <form asp-action="AddModule" method="post">
     <div>
@@ -48,6 +73,11 @@
     </div>
     <br />
     <div style="text-align:center">
+        <label>
+            Note: If you are entering a module for a second time, the appliction will allow you to enter it as students may take a module more than once. 
+            However, be aware this will result in the you seeing duplicate modules on your home page.
+        </label>
+        <br/>
         <button name="btnEnter" style="font-size:35px;">Add</button>
         <br />
         <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
