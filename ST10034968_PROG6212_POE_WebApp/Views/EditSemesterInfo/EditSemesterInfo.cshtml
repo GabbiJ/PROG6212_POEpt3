@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "EditSemesterInfo";
+}
+
+<div style="background-image: linear-gradient(to right,#F15156, #FEEAEA); width: 100%; border-radius: 20px;">
+    <h1 style="color:#151515">EditSemesterInfo</h1>
+</div>
+
+<body>
+    <form asp-action="Login" method="post">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <label style="font-size:40px">This semester's start date:</label>
+                </td>
+                <td>
+                    <input type="date" name="txtStartDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:40px">Number of weeks this semester:</label>
+                </td>
+                <td>
+                    <input type="number" name="txtNumOfWeeks" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button name="btnEnter" style="font-size:35px;">Enter</button>
+        <br />
+        <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
+    </form>
+</body>
+
+

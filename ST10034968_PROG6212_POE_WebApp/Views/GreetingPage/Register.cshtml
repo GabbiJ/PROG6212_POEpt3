@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+<div style="background-image: linear-gradient(to right,#F15156, #EFC3E6, #9C89B8); height: 15px; width: 100%; border-radius: 20px;">
+</div>
+
+<body style="align-items:center; justify-content: center; text-align:center">
+    <form asp-controller="GreetingPage" asp-action="Register" method="post">
+        <label style="font-size:40px">Username</label>
+        <br/>
+        <br/>
+        <input type="text" name="txtUsername" />
+        <br/>
+        <br/>
+        <br/>
+        <label style="font-size:40px">Password</label>
+        <br/>
+        <br/>
+        <input type="password" name="txtPassword" />
+        <br/>
+        <br/>
+            <button name="btnRegister" style="font-size:30px;">Register</button>
+        <br/>
+        <label style="font-size:25px; color: #D5424E">@ViewBag.ErrorMessage</label>
+    </form>
+</body>

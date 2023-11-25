@@ -1,0 +1,53 @@
+﻿@model List<dynamic>
+
+@{
+    ViewData["Title"] = "HomePage";
+}
+
+<h1>Home</h1>
+<br/>
+<h2>@ViewBag.WelcomeUser</h2>
+<div style="background-image: linear-gradient(to right,#F15156, #EFC3E6, #9C89B8); width: 100%; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h2 style="color:#151515">Your Semester</h2>
+    <label style="color:#151515; font-weight: bold">@ViewBag.StartDate</label>
+    <br/>
+    <label style="color:#151515; font-weight: bold">@ViewBag.Dur</label>
+    <form asp-controller="EditSemesterInfo" asp-action="EditSemesterInfo" method="get">
+        <button name="btnEdit">Edit</button>
+    </form>
+</div>
+<div>
+    <h2>Modules</h2>
+    <table cellpadding="7" style="border:solid;" >
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Credits</th>
+            <th>Class Hours Per Week</th>
+            <th>Total Study Hours Per Week</th>
+            <th>Self Study Per Week</th>
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Name</td>
+                <td>@m.Code</td>
+                <td>@m.NumOfCredits</td>
+                <td>@m.ClassHoursPerWeek</td>
+                <td>@m.TotalStudyHrsPerWeek</td>
+                <td>@m.SelfStudyPerWeek</td>
+            </tr>
+        }
+    </table>
+</div>
+<div style="width: 100%; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <form asp-controller="EditSemesterInfo" asp-action="AddModule" method="get">
+        <button name="btnAddModule">Add Module</button>
+    </form>
+    <br/>
+    <form asp-controller="EditSemesterInfo" asp-action="AddStudyTime" method="get">
+        <button name="btnAddStudyTime">Add Study Time</button>
+    </form>
+</div>
+
+

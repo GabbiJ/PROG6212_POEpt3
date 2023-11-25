@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST10034968_PROG6212_POE_WebApp", "ST10034968_PROG6212_POE_WebApp\ST10034968_PROG6212_POE_WebApp.csproj", "{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POEClassLibrary", "C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\POEClassLibrary\POEClassLibrary.csproj", "{1F9970BD-112C-4B14-BF56-FBFC28BAA610}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9970BD-112C-4B14-BF56-FBFC28BAA610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9970BD-112C-4B14-BF56-FBFC28BAA610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9970BD-112C-4B14-BF56-FBFC28BAA610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9970BD-112C-4B14-BF56-FBFC28BAA610}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDBFD6AD-BFFF-47FB-8F4B-04F224F1609E}
+	EndGlobalSection
+EndGlobal

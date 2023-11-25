@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Lerato's Studying Organiser";
+}
+
+<h1 style="text-align:center; font-size:60px;">Lerato's Studying Organiser</h1>
+<body>
+    <div style="background-image: linear-gradient(to right,#F15156, #EFC3E6, #9C89B8); height: 80vh; width: 100%; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <table style="width: 100%;">
+            <tr style=" vertical-align: middle;">
+                <td style="text-align:center;">
+                    <form asp-controller="GreetingPage" asp-action="Login" method="get">
+                        <button name="btnLogin" style="font-size:45px;">Login</button>
+                    </form>                       
+                </td>
+                <td style="text-align:center;">
+                    <form asp-controller="GreetingPage" asp-action="Register" method="get">
+                        <button name="btnRegister" style="font-size:45px;">Register</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>    
+</body>
+
+
+
