@@ -8,7 +8,7 @@
     <h1 style="color:#151515">Add Module</h1>
 </div>
 
-<div>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <h2>All Pre-Existing Modules</h2>
     <table cellpadding="7" style="border:solid;">
         <tr>
@@ -27,11 +27,13 @@
             </tr>
         }
     </table>
+    <br />
     <label>If you wish to add one of the modules above simply input the corresponding module code for the module.
         However, the modules in the list above take precedence over the information submitted. 
         Thus if you enter a module code of a pre-existing module in the table above all other 
         information you have submitted will be ignored and the pre-existing module information will be used.
     </label>
+    <br />
 </div>
 
 <form asp-action="AddModule" method="post">
@@ -66,18 +68,20 @@
                     <label style="font-size:40px">Class Hours Per Week:</label>
                 </td>
                 <td>
-                    <input type="number" name="txtClassHoursPerWeek" />
+                    <input type="text" name="txtClassHoursPerWeek" />
                 </td>
             </tr>
         </table>
     </div>
     <br />
     <div style="text-align:center">
+        <br />
         <label>
             Note: If you are entering a module for a second time, the appliction will allow you to enter it as students may take a module more than once. 
             However, be aware this will result in the you seeing duplicate modules on your home page.
         </label>
         <br/>
+        <br />
         <button name="btnEnter" style="font-size:35px;">Add</button>
         <br />
         <label style="font-size:25px; color: #D5424E;" id="lblError"> @ViewBag.ErrorMessage </label>
