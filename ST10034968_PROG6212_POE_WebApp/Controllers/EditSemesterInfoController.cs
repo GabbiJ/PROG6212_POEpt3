@@ -10,7 +10,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
     {
         public IActionResult EditSemesterInfo()
         {
-            return View();
+            return View(CurrentSemester.modules);
         }
         public IActionResult AddModule()
         {
@@ -41,8 +41,19 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                 }
                 else
                 {
+                    //gathering all planned study days into a temporary array
+                    string[] tempDays =
+                    {
+                        collection["cmbMonday"], 
+                        collection["cmbTuesday"], 
+                        collection["cmbWednesday"],
+                        collection["cmbThursday"],
+                        collection["cmbFriday"],
+                        collection["cmbSaturday"],
+                        collection["cmbSunday"]
+                    };
                     //entering info into the database
-                    CurrentSemester.updateDB(((DateTime)startDate).ToString("yyyy-MM-dd"), (int)numOfWeeks);
+                    CurrentSemester.updateDB(((DateTime)startDate).ToString("yyyy-MM-dd"), (int)numOfWeeks, tempDays);
                     //going back to home window
                     return RedirectToAction("HomePage", "Home");
                 }
@@ -108,6 +119,10 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             }
         }
 
+        /// <summary>
+        /// method that retrieves all modules in the database in the module table
+        /// </summary>
+        /// <returns>List of all modules in the database</returns>
         public List<Module> allMmodules()
         {
             //populating table with all modules in database
@@ -163,7 +178,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                     string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{mod.Code}')";
                     SqlCommand cmdInsert = new SqlCommand(strInsert, con);
                     await cmdInsert.ExecuteNonQueryAsync();
-                    return; 
+                    return;
                 }
                 //inserting data into both Module table and RegisterModule table
                 //inserting new module into Module table
@@ -224,12 +239,12 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             catch (FormatException fe)
             {
                 ViewBag.ErrorMessage = "Please ensure values are entered correctly.";
-                return View("AddStudyTime");
+                return View("AddStudyTime", CurrentSemester.modules);
             }
             catch (Exception ex)
             {
                 ViewBag.ErrorMessage = ex.Message;
-                return View("AddStudyTime");
+                return View("AddStudyTime", CurrentSemester.modules);
             }
         }
 

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<POEClassLibrary.Module>
+
+@{
     ViewData["Title"] = "EditSemesterInfo";
 }
 
@@ -23,6 +25,103 @@
                 </td>
                 <td>
                     <input type="number" name="txtNumOfWeeks" />
+                </td>
+            </tr>
+        </table>
+        <label style="font-size:40px">Pick a module that you want to study for each day this week:</label>
+        <br />
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <label>Monday:</label>
+                </td>
+                <td>
+                    <select name="cmbMonday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Tuesday:</label>
+                </td>
+                <td>
+                    <select name="cmbTuesday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Wednesday:</label>
+                </td>
+                <td>
+                    <select name="cmbWednesday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Thursday:</label>
+
+                </td>
+                <td>
+                    <select name="cmbThursday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Friday:</label>
+                </td>
+                <td>
+                    <select name="cmbFriday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Saturday:</label>
+                </td>
+                <td>
+                    <select name="cmbSaturday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Sunday:</label>
+                </td>
+                <td>
+                    <select name="cmbSunday" style="color:white; background-color:#151515; padding:6px">
+                        @foreach (var m in Model)
+                        {
+                            <option value="@m.Name">@m.Name</option>
+                        }
+                    </select>
                 </td>
             </tr>
         </table>
