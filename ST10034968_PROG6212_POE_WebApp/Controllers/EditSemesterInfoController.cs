@@ -52,6 +52,14 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                         collection["cmbSaturday"],
                         collection["cmbSunday"]
                     };
+                    //if any of the elements in the array are "None" then it is replaced with a null
+                    for (int i = 0; i < tempDays.Length; i++)
+                    {
+                        if (tempDays[i].Equals("None"))
+                        {
+                            tempDays[i] = null;
+                        }
+                    }
                     //entering info into the database
                     CurrentSemester.updateDB(((DateTime)startDate).ToString("yyyy-MM-dd"), (int)numOfWeeks, tempDays);
                     //going back to home window

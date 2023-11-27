@@ -47,7 +47,27 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             else
             {
                 @ViewBag.StartDate = "Click the Edit button to enter your current semester information";
+                return;
             }
+            //loading what the user plans to study that day
+            DayOfWeek currentDayOfWeek = DateTime.Now.DayOfWeek;
+            string? plannedModule = null;
+            for (int i = 0; i < CurrentSemester.plannedModules.Length; i++)
+            {
+                if ((int)currentDayOfWeek == i)
+                {
+                    plannedModule = CurrentSemester.plannedModules[i];
+                }
+            }
+            if (plannedModule != null) 
+            {
+                plannedModule = "Your planned module to study today: " + plannedModule;
+            }
+            else
+            {
+                plannedModule = "You have not planned to study any modules today.";
+            }
+            @ViewBag.PlannedModule = plannedModule;
            
         }
 
