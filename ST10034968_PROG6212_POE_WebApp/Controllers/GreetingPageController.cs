@@ -219,7 +219,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                     SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
                     await cmdInsert.ExecuteNonQueryAsync();
                     //creating a row in current semester table for student
-                    strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
+                    strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}', NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
                     cmdInsert = new SqlCommand(strInsert, con2);
                     await cmdInsert.ExecuteNonQueryAsync();
                 }

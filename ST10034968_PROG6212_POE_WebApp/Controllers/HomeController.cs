@@ -62,7 +62,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                     plannedModule = CurrentSemester.plannedModules[i];
                 }
             }
-            if (plannedModule != null) 
+            if (plannedModule != null && plannedModule != "NULL") 
             {
                 plannedModule = "Your planned module to study today: " + plannedModule;
             }
