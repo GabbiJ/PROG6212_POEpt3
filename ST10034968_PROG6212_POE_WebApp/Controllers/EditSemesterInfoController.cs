@@ -23,7 +23,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         /// <returns></returns>
         public IActionResult AddModule()
         {
-            return View(allMmodules());
+            return View(allModules());
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             catch (FormatException fe)
             {
                 ViewBag.ErrorMessage = "Please ensure values are entered correctly.";
-                return View("AddModule", allMmodules());
+                return View("AddModule", allModules());
             }
             catch (Exception ex)
             {
@@ -155,7 +155,7 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         /// method that retrieves all modules in the database in the module table
         /// </summary>
         /// <returns>List of all modules in the database</returns>
-        public List<Module> allMmodules()
+        public List<Module> allModules()
         {
             //populating table with all modules in database
             //making list that will store all modules in the database 
