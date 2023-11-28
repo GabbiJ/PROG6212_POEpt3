@@ -10635,8 +10635,8 @@
     },
     "POEClassLibrary/1.0.0": {
       "type": "project",
-      "path": "../../../../OneDrive - ADvTECH Ltd/Varsity College/Year 2/Semester 2/PROG6212/POE/POE Part 2/prog6212-part-2/POEClassLibrary/POEClassLibrary.csproj",
-      "msbuildProject": "../../../../OneDrive - ADvTECH Ltd/Varsity College/Year 2/Semester 2/PROG6212/POE/POE Part 2/prog6212-part-2/POEClassLibrary/POEClassLibrary.csproj"
+      "path": "../POEClassLibrary/POEClassLibrary.csproj",
+      "msbuildProject": "../POEClassLibrary/POEClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10681,8 +10681,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\USER-PC\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 2\\Semester 2\\PROG6212\\POE\\POE Part 2\\prog6212-part-2\\POEClassLibrary\\POEClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\USER-PC\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 2\\Semester 2\\PROG6212\\POE\\POE Part 2\\prog6212-part-2\\POEClassLibrary\\POEClassLibrary.csproj"
+            "C:\\Users\\USER-PC\\OneDrive\\Desktop\\ST10034968_PROG6212_POE_WebApp\\POEClassLibrary\\POEClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\USER-PC\\OneDrive\\Desktop\\ST10034968_PROG6212_POE_WebApp\\POEClassLibrary\\POEClassLibrary.csproj"
             }
           }
         }

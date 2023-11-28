@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ST10034968_PROG6212_POE_WebApp", "ST10034968_PROG6212_POE_WebApp\ST10034968_PROG6212_POE_WebApp.csproj", "{2DE010BB-CF6A-4077-A6DD-7F90FC08D61D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POEClassLibrary", "C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\POEClassLibrary\POEClassLibrary.csproj", "{1F9970BD-112C-4B14-BF56-FBFC28BAA610}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POEClassLibrary", "POEClassLibrary\POEClassLibrary.csproj", "{1F9970BD-112C-4B14-BF56-FBFC28BAA610}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

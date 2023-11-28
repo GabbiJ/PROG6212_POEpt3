@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\POEClassLibrary\POEClassLibrary.csproj" />
+    <ProjectReference Include="..\POEClassLibrary\POEClassLibrary.csproj" />
   </ItemGroup>
 
 </Project>
