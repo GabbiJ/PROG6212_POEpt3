@@ -7,21 +7,40 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
 {
     public class GreetingPageController : Controller
     {
+        /// <summary>
+        /// loads greeting page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Greeting()
         {
             return View();
         }
 
+        /// <summary>
+        /// loads login page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Login()
         {
             return View();
         }
 
+
+        /// <summary>
+        /// loads register page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Register() 
         {
             return View();
         }
 
+
+        /// <summary>
+        /// Post method for login page, activated by clicking login button
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(IFormCollection collection)
@@ -130,6 +149,11 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             }
         }
 
+        /// <summary>
+        /// post method for reigstration page, activated by clicking register button
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Register(IFormCollection collection)
@@ -175,6 +199,11 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Registers a student in the database
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="pass">Password</param>
         public async void registerStudent(string username, string pass)
         {
             try

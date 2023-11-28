@@ -6,7 +6,10 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        //load home page
+        /// <summary>
+        /// loads home page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult HomePage()
         {
             loadCurrentSemester();

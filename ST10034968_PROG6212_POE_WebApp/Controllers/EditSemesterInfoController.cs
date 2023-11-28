@@ -8,20 +8,39 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
 {
     public class EditSemesterInfoController : Controller
     {
+        /// <summary>
+        /// loads EditSemesterInfo page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult EditSemesterInfo()
         {
             return View(CurrentSemester.modules);
         }
+
+        /// <summary>
+        /// loads addModule page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult AddModule()
         {
             return View(allMmodules());
         }
+
+        /// <summary>
+        /// loads addStudyTime page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult AddStudyTime()
         {
             return View(CurrentSemester.modules);
         }
 
         //methods for edit semester info view
+        /// <summary>
+        /// Post method for EditSemesterInfo page. Activated when the "Enter" button is clicked.
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditSemesterInfo(IFormCollection collection)
@@ -79,6 +98,11 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         }
 
         //methods for add module view
+        /// <summary>
+        /// Post method for AddModule page. Activated when the "Add" button is clicked
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddModule(IFormCollection collection)
@@ -201,6 +225,11 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
         }
 
         //methods for add study time view
+        /// <summary>
+        /// Post method for addStudyTime page. Activated when the "Add" button is clicked
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddStudyTime(IFormCollection collection)
@@ -255,7 +284,6 @@ namespace ST10034968_PROG6212_POE_WebApp.Controllers
                 return View("AddStudyTime", CurrentSemester.modules);
             }
         }
-
 
         /// <summary>
         /// Adds StudyTime to the database
