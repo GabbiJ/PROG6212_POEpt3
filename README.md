@@ -8,7 +8,6 @@ This program is aimed to aid Lerato in her studies by allowing her to keep track
 # System Requirements
 
 * The system must use the Windows operating system (Windows 7 or a later version).
-* The system must have Microsoft Visual Studio 2019 or a later version installed and must be able to run an application using a WPF user interface.
 
 # Installing and Starting the Program
 
