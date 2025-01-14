@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Usr+zmZdzb7B9wEoVp9YDG88+7mftN9y24G0WLxa4ecLRcTDx1bCaBmw5qlKWy7cSOMwTqM78ser0Dwxg54kuQ==",
+  "dgSpecHash": "M0dWBF5K3MqPuhjZpnOYeA/kUvhGctdbzYMQwNzBJQSUkc3ntfdkoJC3MLdRB9jSzhfnjKAC8RJIVnANF8lOZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER-PC\\OneDrive\\Desktop\\ST10034968_PROG6212_POE_WebApp\\ST10034968_PROG6212_POE_WebApp\\ST10034968_PROG6212_POE_WebApp.csproj",
+  "projectFilePath": "C:\\Users\\USER-PC\\OneDrive\\Documenti\\Uni Files\\Varsity College\\Year 2\\Semester 2\\PROG6212\\POE\\ST10034968_PROG6212_POE_WebApp\\ST10034968_PROG6212_POE_WebApp\\ST10034968_PROG6212_POE_WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER-PC\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\USER-PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -214,5 +214,16 @@
     "C:\\Users\\USER-PC\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\USER-PC\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

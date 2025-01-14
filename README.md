@@ -57,5 +57,5 @@ I achieved a mark of 100% for my POE part 2 and hence no suggestions were given 
 # Link to My POE Part 2 GitHub Repository
 [Part 2 GitHub Repository](https://github.com/VCSTDN/prog6212-poe-part2-ST10034968.git)
 # Link to My POE Part 3 GitHub Repository
-[Part 3 GitHub Repository]()
+[Part 3 GitHub Repository](https://github.com/VCSTDN/prog6212-poe-ST10034968.git)
 
